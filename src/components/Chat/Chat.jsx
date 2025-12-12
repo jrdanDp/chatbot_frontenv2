@@ -3,15 +3,13 @@ const apiUrl = import.meta.env.VITE_API_URL;
 import Message from './Message';
 import TypingIndicator from './TypingIndicator';
 import useChat from '../../hooks/useChat';
-<<<<<<< HEAD
-import SummaryButton from './SummaryButton';
 import '../../styles/chat.css';
 import '../../styles/animation.css';
 import '../../styles/SumaryButton.css';
-=======
+
 import '../../styles/chat.css';
 import '../../styles/animation.css';
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -125,15 +123,11 @@ const Chat = () => {
         {isTyping && <TypingIndicator />}
         <div ref={messagesEndRef} />
       </div>
-<<<<<<< HEAD
 
       <SummaryButton 
         sessionId={sessionId} 
         messageCount={messages.filter(m => m.sender === 'user').length} 
       />
-
-=======
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
       <form onSubmit={handleSubmit} className="chat-input-form">
         <input
           type="text"

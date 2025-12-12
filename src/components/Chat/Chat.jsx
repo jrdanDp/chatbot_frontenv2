@@ -5,9 +5,14 @@ import useChat from '../../hooks/useChat';
 import SummaryButton from './SummaryButton';
 import '../../styles/chat.css';
 import '../../styles/animation.css';
+<<<<<<< HEAD
 // import '../../styles/SumaryButton.css'; // Ya se importa dentro de SummaryButton.jsx
 
 const apiUrl = import.meta.env.VITE_API_URL;
+=======
+import '../../styles/SumaryButton.css';
+import SummaryButton from './SummaryButton'; 
+>>>>>>> 3862fe590c429f554f399bf010bb020d0f17cf41
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);

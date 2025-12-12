@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* ========================================
-   ESTILOS BASE - RESET Y CONFIGURACIÓN GLOBAL
-   ======================================== */
-=======
+
 :root {
   /* Paleta de colores */
   --primary-bg: #9CABB2; /* Fondo claro principal */
@@ -25,7 +21,6 @@
   --border-radius: 8px;
   --border: 1px solid var(--secondary-text);
 }
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 
 /* Reset y estilos base */
 * {
@@ -34,7 +29,6 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 html {
   scroll-behavior: smooth;
 }
@@ -250,6 +244,5 @@ p {
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-lg);
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+  padding: var(--space-lg)
 }

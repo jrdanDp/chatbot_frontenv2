@@ -6,10 +6,7 @@ import useChat from '../../hooks/useChat';
 import '../../styles/chat.css';
 import '../../styles/animation.css';
 import '../../styles/SumaryButton.css';
-
-import '../../styles/chat.css';
-import '../../styles/animation.css';
-
+import SummaryButton from './SummaryButton'; 
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -128,6 +125,7 @@ const Chat = () => {
         sessionId={sessionId} 
         messageCount={messages.filter(m => m.sender === 'user').length} 
       />
+
       <form onSubmit={handleSubmit} className="chat-input-form">
         <input
           type="text"

@@ -13,12 +13,9 @@
     "axios": "^1.9.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-<<<<<<< HEAD
     "react-router-dom": "^7.6.1",
     "selenium-webdriver": "^4.38.0"
-=======
     "react-router-dom": "^7.6.1"
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

@@ -1,0 +1,32 @@
+/* ========================================
+   FOOTER - COMPONENTE MINIMALISTA
+   ======================================== */
+
+.footer {
+  background-color: var(--bg-primary);
+  border-top: var(--border-light);
+  padding: var(--space-lg) 0;
+  margin-top: auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.footer-bottom p {
+  font-size: var(--font-size-sm);
+  color: var(--text-medium);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--space-md) 0;
+  }
+
+  .footer-bottom {
+    padding: var(--space-sm);
+  }
+}

@@ -1,0 +1,398 @@
+<<<<<<< HEAD
+/* ========================================
+   COMPONENTES BASE - BOTONES, INPUTS, ETC
+   ======================================== */
+
+/* ---- BOTONES ---- */
+.button {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Tamaños de botón */
+.button-sm {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+.button-lg {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--font-size-lg);
+  min-width: 200px;
+}
+
+/* Variantes de botón */
+.button-primary {
+  background-color: var(--blue-soft);
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: var(--blue-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  background-color: var(--mint-button);
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-secondary:hover:not(:disabled) {
+  background-color: var(--mint-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.button-outline {
+  background-color: transparent;
+  border: var(--border-light);
+  color: var(--blue-soft);
+}
+
+.button-outline:hover:not(:disabled) {
+  background-color: var(--blue-light);
+  border-color: var(--blue-soft);
+}
+
+.button-text {
+  background-color: transparent;
+  color: var(--blue-soft);
+  padding: var(--space-xs) 0;
+}
+
+.button-text:hover:not(:disabled) {
+  color: var(--blue-hover);
+  text-decoration: underline;
+}
+
+/* Compatibilidad con nombres antiguos */
+.primary-button {
+  @extend .button-primary;
+  @extend .button-lg;
+}
+
+.large-button {
+  @extend .button-lg;
+}
+
+.disabled-button {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- INPUTS ---- */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.input-field,
+textarea {
+  padding: var(--space-sm);
+  border: var(--border-light);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-secondary);
+  color: var(--text-dark);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-base);
+  width: 100%;
+}
+
+.input-field:focus,
+textarea:focus {
+  border-color: var(--blue-soft);
+  outline: none;
+}
+
+.input-field::placeholder,
+textarea::placeholder {
+  color: var(--text-medium);
+}
+
+/* ---- ETIQUETAS ---- */
+label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-dark);
+}
+
+/* ---- TARJETAS ---- */
+.card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ---- BADGES Y ETIQUETAS ---- */
+.badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background-color: var(--blue-light);
+  color: var(--blue-soft);
+}
+
+.badge-success {
+  background-color: #D4EDDA;
+  color: var(--success);
+}
+
+/* ---- DIVISORES ---- */
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--space-md) 0;
+}
+
+/* ---- ALERTAS ---- */
+.alert {
+  padding: var(--space-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.alert-info {
+  background-color: var(--blue-light);
+  color: var(--blue-soft);
+  border-left: 4px solid var(--blue-soft);
+}
+
+.alert-error {
+  background-color: #F8D7DA;
+  color: var(--error);
+  border-left: 4px solid var(--error);
+}
+
+/* ---- MENSAJES DEL CHAT ---- */
+.message {
+  margin-bottom: var(--space-md);
+  max-width: 80%;
+  display: flex;
+  gap: var(--space-sm);
+  animation: fadeIn var(--transition-base) ease-in;
+=======
+/* Botones */
+.button {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+/* Estilo para el botón deshabilitado */
+.disabled-button {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: var(--ui-neutral) !important;
+}
+
+/* Texto del contador dentro del botón */
+.countdown-text {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.large-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  min-width: 250px;
+}
+
+/* Alineación de botones */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.primary-button {
+  background-color: var(--heading-color);
+  color: var(--text-light);
+}
+
+.primary-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Formularios */
+.input-field {
+  width: 100%;
+  padding: var(--space-sm);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--ui-neutral);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent-hover);
+}
+
+/* Mensajes del chat */
+.message {
+  margin-bottom: var(--space-md);
+  max-width: 80%;
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+}
+
+.message-content {
+  padding: var(--space-sm) var(--space-md);
+<<<<<<< HEAD
+  border-radius: var(--border-radius-lg);
+  line-height: var(--line-height-normal);
+  word-wrap: break-word;
+  font-size: var(--font-size-base);
+}
+
+.message.user {
+  justify-content: flex-end;
+=======
+  border-radius: var(--border-radius);
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.message.user {
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+  margin-left: auto;
+}
+
+.message.user .message-content {
+<<<<<<< HEAD
+  background-color: var(--bubble-user);
+  color: var(--bubble-user-text);
+}
+
+.message.bot .message-content {
+  background-color: var(--blue-chat);
+  color: var(--text-white);
+}
+
+/* ---- INDICADOR DE ESCRITURA ---- */
+.typing-indicator {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+=======
+  background-color: var(--heading-color);
+  color: var(--text-light);
+}
+
+.message.bot .message-content {
+  background-color: var(--ui-neutral);
+  color: var(--text-light);
+}
+
+
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+<<<<<<< HEAD
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typingAnimation 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingAnimation {
+  0%, 60%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- SECCIÓN CTA ---- */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.cta-section .button {
+  min-width: 250px;
+=======
+  margin: 0 2px;
+  background-color: var(--secondary-text);
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.4;
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+}

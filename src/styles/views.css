@@ -1,0 +1,119 @@
+<<<<<<< HEAD
+/* ========================================
+   VISTAS - ESTILOS ESPECÍFICOS DE VISTAS
+   ======================================== */
+=======
+/* Vista Home */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: var(--space-xl);
+}
+.Color-home{
+    color: var(--text-light);
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.hero-section {
+  max-width: 800px;
+  margin-bottom: 8px;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0 auto 10px;
+  color: var(--secondary-text);
+}
+.description-s1 {
+  max-width: 500px;
+  margin: 0 auto 10px;
+  color: rgb(190, 163, 163);
+}
+
+.home-container .description-s1 {
+  font-size: 0.8rem; /* Un poco más grande */
+  line-height: 1.7;
+  max-width: 650px;   /* Ancho máximo */
+}
+
+/* Formulario */
+.form-button {
+  background-color: var(--heading-color);
+  color: var(--text-light);
+  margin-bottom: 10;
+}
+
+.form-button:disabled {
+  background-color: var(--accent-hover);
+}
+
+.countdown-message {
+  color: var(--secondary-text);
+  margin-top: var(--space-md);
+}
+
+/* Vista Chat */
+.chat-view-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+}
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+
+/* Encabezado del chat */
+.chat-header {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--secondary-text);
+}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+.chat-header h1 {
+  color: var(--heading-color);
+  font-size: 2.2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.chat-header .subtitle {
+  color: #6e777a;
+  font-size: 1.1rem;
+}
+
+<<<<<<< HEAD
+=======
+/* Estilos para PostTest */
+.post-test-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.thank-you-message {
+  margin: var(--space-xl) 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.motivational-quote {
+  font-style: italic;
+  margin-top: var(--space-xl);
+  color: var(--accent-hover);
+}
+
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+/* Temporizador en ChatView */
+.timer {
+  margin-top: var(--space-sm);
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}

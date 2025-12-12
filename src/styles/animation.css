@@ -1,0 +1,27 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  0% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-3px); }
+  100% { opacity: 0.4; transform: translateY(0); }
+}
+
+/* Clases de animación */
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation: typing 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation: typing 1s infinite 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation: typing 1s infinite 0.4s;
+}

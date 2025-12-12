@@ -1,0 +1,61 @@
+/* ========================================
+   INFO CARD - TARJETA INFORMATIVA
+   ======================================== */
+
+.info-card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  min-height: 240px;
+  justify-content: center;
+}
+
+.info-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.info-card-icon {
+  font-size: 2.5em;
+}
+
+.info-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.info-card-description {
+  font-size: var(--font-size-sm);
+  color: var(--text-medium);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-card {
+    padding: var(--space-md);
+    min-height: auto;
+  }
+
+  .info-card-icon {
+    font-size: 2em;
+  }
+
+  .info-card-title {
+    font-size: var(--font-size-base);
+  }
+
+  .info-card-description {
+    font-size: var(--font-size-xs);
+  }
+}

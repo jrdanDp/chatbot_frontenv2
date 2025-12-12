@@ -1,0 +1,255 @@
+<<<<<<< HEAD
+/* ========================================
+   ESTILOS BASE - RESET Y CONFIGURACIÓN GLOBAL
+   ======================================== */
+=======
+:root {
+  /* Paleta de colores */
+  --primary-bg: #9CABB2; /* Fondo claro principal */
+  --dark-bg: #0E1112;    /* Fondo oscuro */
+  --secondary-text: #435459; /* Texto secundario/bordes */
+  --heading-color: #434B54; /* Encabezados/íconos */
+  --ui-neutral: #535A5C; /* Componentes UI */
+  --accent-hover: #49544C; /* Énfasis/hover */
+  --text-light: #f8f9fa; /* Texto claro */
+  --text-dark: #0E1112;  /* Texto oscuro */
+
+  /* Espaciado */
+  --space-xs: 0.5rem;
+  --space-sm: 0.65rem;
+  --space-md: 0.8rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  /* Bordes */
+  --border-radius: 8px;
+  --border: 1px solid var(--secondary-text);
+}
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+<<<<<<< HEAD
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-medium);
+  line-height: var(--line-height-normal);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---- TIPOGRAFÍA ---- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-normal);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--text-medium);
+}
+
+/* ---- ENLACES ---- */
+a {
+  color: var(--blue-soft);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--blue-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--blue-soft);
+  outline-offset: 2px;
+}
+
+/* ---- BOTONES BASE ---- */
+button, input[type="submit"], input[type="button"] {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-base);
+}
+
+button:focus-visible, 
+input[type="submit"]:focus-visible, 
+input[type="button"]:focus-visible {
+  outline: 2px solid var(--blue-soft);
+  outline-offset: 2px;
+}
+
+/* ---- INPUTS Y FORMULARIOS ---- */
+input, textarea, select {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-dark);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-medium);
+  opacity: 0.7;
+}
+
+input:focus-visible, 
+textarea:focus-visible, 
+select:focus-visible {
+  outline: 2px solid var(--blue-soft);
+  outline-offset: 2px;
+}
+
+/* ---- IMÁGENES ---- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- LAYOUT PRINCIPAL ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.container-lg {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.container-sm {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ---- GRID Y FLEXBOX ---- */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid-cols-3,
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* ---- SCROLLBAR PERSONALIZADO ---- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-medium);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dark);
+=======
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+  color: var(--text-light);
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--text-light);
+}
+
+/* Layout principal */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+>>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+}

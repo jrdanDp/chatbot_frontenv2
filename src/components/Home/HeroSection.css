@@ -1,0 +1,140 @@
+/* Este archivo está deprecado - Los estilos de HeroSection ahora están en src/styles/home.css
+   El componente HeroSection.jsx tampoco se usa, el HTML está integrado en Home.jsx */
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--space-md);
+  box-sizing: border-box;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--text-white);
+  margin: 0;
+  animation: slideInLeft var(--transition-slow) ease-out;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  animation: slideInLeft var(--transition-slow) ease-out 0.1s backwards;
+}
+
+.hero-description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  animation: slideInLeft var(--transition-slow) ease-out 0.2s backwards;
+}
+
+.hero-section .button-primary {
+  background-color: var(--mint-button);
+  color: var(--text-dark);
+  font-weight: var(--font-weight-semibold);
+  align-self: flex-start;
+  animation: slideInLeft var(--transition-slow) ease-out 0.3s backwards;
+}
+
+.hero-section .button-primary:hover {
+  background-color: var(--mint-hover);
+  transform: translateY(-2px);
+}
+
+.hero-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration-placeholder {
+  font-size: 10rem;
+  animation: floatAnimation 4s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: var(--space-lg) var(--space-md);
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .illustration-placeholder {
+    font-size: 6rem;
+  }
+
+  .hero-section::before {
+    width: 250px;
+    height: 250px;
+    top: -30%;
+    right: -20%;
+  }
+}

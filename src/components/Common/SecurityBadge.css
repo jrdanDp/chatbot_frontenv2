@@ -1,0 +1,108 @@
+/* ========================================
+   SECURITY BADGE - INDICADOR DE SEGURIDAD
+   ======================================== */
+
+.security-badge {
+  background: linear-gradient(135deg, var(--blue-light), rgba(90, 173, 226, 0.05));
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  animation: slideIn var(--transition-slow) ease-out;
+}
+
+.badge-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.badge-icon {
+  font-size: 1.3em;
+  flex-shrink: 0;
+}
+
+.badge-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.badge-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--blue-soft);
+  margin: 0;
+}
+
+.badge-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-medium);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+/* Variante compacta */
+.security-badge.compact {
+  background-color: var(--blue-light);
+  padding: var(--space-sm) var(--space-md);
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.security-badge.compact .badge-icon {
+  font-size: 1em;
+}
+
+.security-badge.compact .badge-text {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--blue-soft);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* En footer del chat */
+.chat-security-footer {
+  background-color: var(--bg-secondary);
+  border-top: var(--border-light);
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--text-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 40px;
+}
+
+.chat-security-footer .security-icon {
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .security-badge {
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .badge-title {
+    font-size: var(--font-size-xs);
+  }
+
+  .badge-subtitle {
+    font-size: 0.7rem;
+  }
+}

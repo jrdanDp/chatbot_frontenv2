@@ -1,15 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
-const apiUrl = import.meta.env.VITE_API_URL;
 import Message from './Message';
 import TypingIndicator from './TypingIndicator';
 import useChat from '../../hooks/useChat';
+import SummaryButton from './SummaryButton';
 import '../../styles/chat.css';
 import '../../styles/animation.css';
-import '../../styles/SumaryButton.css';
+// import '../../styles/SumaryButton.css'; // Ya se importa dentro de SummaryButton.jsx
 
-import '../../styles/chat.css';
-import '../../styles/animation.css';
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -20,11 +18,11 @@ const Chat = () => {
   const { addMessage, streamMessage } = useChat(setMessages);
 
   // Guardar sessionId en localStorage
-  //useEffect(() => {
-  //  if (sessionId) {
-   //   localStorage.setItem('chatSessionId', sessionId);
-   // }
-  //}, [sessionId]);
+  useEffect(() => {
+    if (sessionId) {
+      localStorage.setItem('chatSessionId', sessionId);
+    }
+  }, [sessionId]);
 
   // Auto-scroll
   const scrollToBottom = () => {
@@ -50,7 +48,7 @@ const Chat = () => {
         ...(sessionId && { session_id: sessionId })
       };
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/chat/stream`, {
+      const response = await fetch(`${apiUrl}/chat/stream`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,13 +89,13 @@ const Chat = () => {
                 // Extraer solo el texto del mensaje
                 const data = JSON.parse(jsonData);
                 const text = data.message || jsonData;
-                messageContent = text;
+                messageContent += text;
                 streamMessage({ text: messageContent, sender: 'bot' });
               }
             } catch (err) {
               console.error('Error procesando mensaje:', err);
               // Si falla el parseo, mostrar el contenido directo
-              messageContent = line.substring(6).trim();
+              messageContent += line.substring(6).trim();
               streamMessage({ text: messageContent, sender: 'bot' });
             }
           }
@@ -117,8 +115,8 @@ const Chat = () => {
   return (
     <div className="chat-container">
       <div className="messages-container">
-        {messages.map((message, index) => (
-          <Message key={index} message={message} />
+        {messages.map((message) => (
+          <Message key={message.id} message={message} />
         ))}
         {isTyping && <TypingIndicator />}
         <div ref={messagesEndRef} />
@@ -128,6 +126,7 @@ const Chat = () => {
         sessionId={sessionId} 
         messageCount={messages.filter(m => m.sender === 'user').length} 
       />
+
       <form onSubmit={handleSubmit} className="chat-input-form">
         <input
           type="text"

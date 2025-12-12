@@ -12,8 +12,6 @@ import './styles/animation.css';
 
 /* Estilos de Vistas */
 import './styles/views.css';
-import './styles/home.css';
-import './styles/chat-view.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

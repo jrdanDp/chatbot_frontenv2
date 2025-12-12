@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-/* ========================================
-   CHAT STYLES - ESTILOS DEL COMPONENTE CHAT
-   ======================================== */
+
 
 .chat-container {
   display: flex;
@@ -87,12 +84,11 @@
   margin-bottom: var(--space-md);
   max-width: 80%;
   animation: fadeIn 0.3s ease;
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
+
 }
 
 .message-content {
   padding: var(--space-sm) var(--space-md);
-<<<<<<< HEAD
   border-radius: var(--border-radius-lg);
   line-height: var(--line-height-normal);
   word-wrap: break-word;
@@ -179,13 +175,11 @@
   background-color: var(--ui-neutral);
   color: var(--text-light);
   border-bottom-left-radius: 4px;
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 }
 
 /* Formulario de entrada */
 .chat-input-form {
   display: flex;
-<<<<<<< HEAD
   gap: var(--space-md);
   padding: var(--space-md);
   background-color: var(--bg-secondary);

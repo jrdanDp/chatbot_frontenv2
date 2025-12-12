@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* ========================================
-   VISTAS - ESTILOS ESPECÍFICOS DE VISTAS
-   ======================================== */
-=======
+
 /* Vista Home */
 .home-container {
   display: flex;
@@ -63,8 +59,6 @@
   margin: 0 auto;
   padding: 20px;
 }
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
-
 /* Encabezado del chat */
 .chat-header {
   text-align: center;
@@ -73,10 +67,6 @@
   border-bottom: 1px solid var(--secondary-text);
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 .chat-header h1 {
   color: var(--heading-color);
   font-size: 2.2rem;
@@ -88,8 +78,7 @@
   font-size: 1.1rem;
 }
 
-<<<<<<< HEAD
-=======
+
 /* Estilos para PostTest */
 .post-test-container {
   max-width: 800px;
@@ -109,8 +98,6 @@
   margin-top: var(--space-xl);
   color: var(--accent-hover);
 }
-
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 /* Temporizador en ChatView */
 .timer {
   margin-top: var(--space-sm);

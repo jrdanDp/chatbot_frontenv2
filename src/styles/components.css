@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* ========================================
    COMPONENTES BASE - BOTONES, INPUTS, ETC
    ======================================== */
@@ -283,12 +283,10 @@ label {
 .message {
   margin-bottom: var(--space-md);
   max-width: 80%;
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 }
 
 .message-content {
   padding: var(--space-sm) var(--space-md);
-<<<<<<< HEAD
   border-radius: var(--border-radius-lg);
   line-height: var(--line-height-normal);
   word-wrap: break-word;
@@ -297,19 +295,16 @@ label {
 
 .message.user {
   justify-content: flex-end;
-=======
   border-radius: var(--border-radius);
   line-height: 1.5;
   word-wrap: break-word;
 }
 
 .message.user {
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
   margin-left: auto;
 }
 
 .message.user .message-content {
-<<<<<<< HEAD
   background-color: var(--bubble-user);
   color: var(--bubble-user-text);
 }
@@ -325,7 +320,6 @@ label {
   gap: var(--space-xs);
   align-items: center;
 }
-=======
   background-color: var(--heading-color);
   color: var(--text-light);
 }
@@ -336,12 +330,10 @@ label {
 }
 
 
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 
 .typing-indicator span {
   height: 8px;
   width: 8px;
-<<<<<<< HEAD
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   display: inline-block;
@@ -388,11 +380,9 @@ label {
 
 .cta-section .button {
   min-width: 250px;
-=======
   margin: 0 2px;
   background-color: var(--secondary-text);
   border-radius: 50%;
   display: inline-block;
   opacity: 0.4;
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 }

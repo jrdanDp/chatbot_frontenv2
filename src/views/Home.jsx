@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Common/Footer';
 import InfoCard from '../components/Home/InfoCard';
 import Testimonial from '../components/Home/Testimonial';
 import '../styles/home.css';
-=======
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 
 const Home = () => {
   const navigate = useNavigate();
 
-<<<<<<< HEAD
   return (
     <div className="home-view">
       
@@ -71,30 +67,6 @@ const Home = () => {
       <Testimonial />
 
       <Footer hideBackground={false} />
-=======
- 
-  return (
-    <div className="home-container">
-      <header className="hero-section">
-        <h1 className="color-home">SerenBot</h1>
-        <p className="subtitle">Tu compañero terapéutico digital</p>
-        <p className="description">
-          Un espacio seguro para expresar tus pensamientos y emociones. 
-          Por favor completa nuestro breve formulario antes de comenzar.
-        </p>
-      </header>
-
-      <div className="cta-section">
- 
-        
-        <button 
-          className={`button primary-button large-button`}
-          onClick={  () => navigate('/chat') }
-        >
-          Probar SerenBot
-        </button>
-      </div>
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
     </div>
   );
 };

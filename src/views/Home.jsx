@@ -1,10 +1,10 @@
 
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Common/Footer';
 import InfoCard from '../components/Home/InfoCard';
 import Testimonial from '../components/Home/Testimonial';
 import '../styles/home.css';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();

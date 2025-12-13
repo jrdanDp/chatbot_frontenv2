@@ -59,7 +59,7 @@
 .message.bot {
   align-self: flex-start;
   justify-content: flex-start;
-=======
+
 /* Contenedor principal del chat */
 .chat-container {
   display: flex;
@@ -154,7 +154,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-=======
   border-radius: var(--border-radius);
   line-height: 1.5;
   word-wrap: break-word;
@@ -250,7 +249,6 @@
   .chat-input-form .button {
     width: 100%;
   }
-=======
   padding: 12px;
   background-color: var(--dark-bg);
   border-top: 1px solid var(--secondary-text);
@@ -290,5 +288,4 @@
 .chat-input-form button:disabled {
   background-color: var(--secondary-text);
   cursor: not-allowed;
->>>>>>> 3ba1d143ba0c1fdab7309cb55ed369554f725765
 }
